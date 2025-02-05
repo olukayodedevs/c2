@@ -3,6 +3,8 @@
 This is a quick explanation of how I set up the  encryption app using **Vagrant**, **NGINX**, **PHP-FPM**, and **VirtualBox**. After a system crash, the tool stopped working >>>>> and I was able to restore it by resolving compatibility issues and ensuring it runs smoothly in a modern development environment..
 
 ---
+![encrpyt](./c2.png)
+*Encryption app now works without issues*
 
 ## The Problem
 The tool relied on **PHP 7.1** and the deprecated `mcrypt` extension, which wasn’t compatible with the default **PHP 8.3** installed in this restored Vagrant environment.  Things that must be done
@@ -23,7 +25,7 @@ The tool relied on **PHP 7.1** and the deprecated `mcrypt` extension, which wasn
    - And on `encryption.conf line 4` I made sure the encryption-dev project was served from `/opt/c2/encryption-dev/public`.
 
 3. **Fixed Synced Folders**:
-   - Updated the `Vagrantfile` on line 45 to sync the`encryption-dev` folder to `/opt/c2/encryption-dev` in the VM.
+   - Updated the `Vagrantfile line 45`  to sync the `encryption-dev` folder to `/opt/c2/encryption-dev` in the VM.
 
 
 4. **Tested Everything**:
