@@ -20,7 +20,7 @@ The tool relied on **PHP 7.1** and the deprecated `mcrypt` extension, which wasn
 
 2. **Configured NGINX**:
    - On `encryption.conf line 20` i updated the NGINX configuration to point to the correct PHP-FPM socket which is now `php7.1-fpm.sock`.
-   - And on `encryption.conf line 4` I made sure the encryption-dev project was served from `/opt/c2/encryption-dev/`.
+   - And on `encryption.conf line 4` I made sure the encryption-dev project was served from `/opt/c2/encryption-dev/public`.
 
 3. **Fixed Synced Folders**:
    - Updated the `Vagrantfile` on line 45 to sync the`encryption-dev` folder to `/opt/c2/encryption-dev` in the VM.
